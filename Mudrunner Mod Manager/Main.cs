@@ -53,6 +53,12 @@ namespace Mudrunner_Mod_Manager
 
             string modFileName = Path.Combine(modFolder, modName.Replace(" ", "_") + ".zip");
 
+            if (File.Exists(modFileName))
+            {
+                if (DialogResult.No == MessageBox.Show(string.Format("{0} already exists. Do you want to overwrite it?", modFileName), "Overwrite Mod File?", MessageBoxButtons.YesNo)) return;
+
+                File.Delete(modFileName);
+            }
             File.Copy(result, modFileName);
 
             _settings.InstalledMods.Add(new ModInfo(modName, modFileName));

@@ -15,7 +15,12 @@ namespace Mudrunner_Mod_Manager
         {
             public string ExeName = "MudRunner.exe";
             public string MudrunnerConfig = "config.xml";
-            public string[] ModFolders = new string[] { "levels", "billboards", "meshcache", "texturecache" };
+            public string[] ModFolders = new string[] 
+            {
+                "levels", "billboards", "_templates",
+                "classes", "joysticks", "scripts",
+                "sounds", "strings"
+            };
             public string[] LevelFiles = new string[] { "*.stg", "*.dds" };
             public string LevelFolderName = "Levels";
             public string ModsFolderName = "mods";

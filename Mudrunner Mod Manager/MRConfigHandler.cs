@@ -13,7 +13,7 @@ namespace Mudrunner_Mod_Manager
         private const string MEDIAPATHS_ROOT = ROOT_ELEMENT; 
         private const string MEDIAPATH_ELEMENT = "MediaPath";
         private const string PATH_ATTR = "Path";
-        private const string MODS_DIR = "/mods/";
+        private const string MODS_DIR = "mods/";
 
         private Dictionary<string, string> additionalAttrs = new Dictionary<string, string>()
             { { "DoPrepend", "true" } };
